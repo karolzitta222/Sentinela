@@ -145,5 +145,14 @@ app.get("/medicacoes", (req, res) => {
   res.json(db.consultas);
 });
 
+// TESTE
+app.get("/teste", (req, res) => {
+  res.send("Servidor funcionando!");
+});
+
 // START
-module.exports = app;
+const PORT = process.env.PORT || 10000;
+
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`Servidor rodando em 0.0.0.0:${PORT}`);
+});
